@@ -712,7 +712,7 @@
                         session.students.forEach(student => {
                             const miscueText = student.miscues.filter(m => m !== '').join('; ');
                             const wordListText = student.words.join('; ');
-                            const row = f'"{date}","{student.name}","{student.yes}","{student.no}","{miscueText}","{wordListText}"\\n';
+                            const row = `"${date}","${student.name}","${student.yes}","${student.no}","${miscueText}","${wordListText}"\\n`;
                             csvContent += row;
                         });
                     });
